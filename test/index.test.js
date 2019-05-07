@@ -1,6 +1,7 @@
-import sayHello from "../src";
+import { getInstagramFeedInfo } from '../src/index';
 
-test("sayHello", () => {
-  expect(sayHello()).toBe("Hello, Haz!");
-  expect(sayHello("foo")).toBe("Hello, foo!");
+test('getInstagramInfo', () => {
+  return getInstagramFeedInfo('origenstudio').then(data => {
+    expect(data.accountName).toBe('origenstudio');
+  });
 });

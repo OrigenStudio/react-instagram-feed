@@ -1,14 +1,14 @@
 {
-  "name": "generator-nod",
+  "name": "origen-react-instagram-feed",
   "version": "0.0.1",
-  "description": "My node module",
+  "description": "Get the information from a public profile without need to access the API",
   "license": "MIT",
-  "repository": "diegohaz/nod",
+  "repository": "OrigenStudio/react-instagram-feed",
   "main": "dist/index.js",
   "author": {
-    "name": "Diego Haz",
-    "email": "hazdiego@gmail.com",
-    "url": "https://github.com/diegohaz"
+    "name": "Origen Studio",
+    "email": "hello@origen.studio",
+    "url": "https://github.com/OrigenStudio/react-instagram-feed"
   },
   "files": [
     "dist",
@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "test": "jest",
-    "coverage": "npm test -- --coverage",
+    "coverage": "yarn test -- --coverage",
     "postcoverage": "opn coverage/lcov-report/index.html",
     "lint": "eslint .",
     "flow": "flow check",
@@ -24,11 +24,12 @@
     "postdocs": "git add README.md",
     "clean": "rimraf dist",
     "flowbuild": "flow-copy-source src dist",
-    "prebuild": "npm run docs && npm run clean && npm run flowbuild",
+    "prebuild": "yarn run docs && yarn run clean && yarn run flowbuild",
     "build": "babel src -d dist",
-    "preversion": "npm run lint && npm test && npm run build",
+    "preversion": "yarn lint && yarn test && yarn build",
     "version": "standard-changelog && git add CHANGELOG.md",
-    "postpublish": "git push origin master --follow-tags"
+    "postpublish": "git push origin master --follow-tags",
+    "preyalc": "yarn build"
   },
   "husky": {
     "hooks": {
@@ -44,7 +45,11 @@
   "keywords": [
     "generator-nod"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "axios": "0.18.0",
+    "lodash": "4.17.11",
+    "recompose": "0.30.0"
+  },
   "devDependencies": {
     "@babel/cli": "7.2.3",
     "@babel/core": "7.3.4",
@@ -70,5 +75,8 @@
     "prettier": "1.16.4",
     "rimraf": "2.6.3",
     "standard-changelog": "2.0.7"
+  },
+  "peerDependencies": {
+    "react": "16.8.6"
   }
 }

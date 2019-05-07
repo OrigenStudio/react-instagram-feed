@@ -1,0 +1,11 @@
+{
+    "editor.tabSize": 2,
+    "files.associations": {
+        ".eslintrc": "jsonc",
+        "*.json": "jsonc"
+    },
+    "flow.useNPMPackagedFlow": true,
+    "javascript.validate.enable": false,
+    "prettier.eslintIntegration": true,
+    "typescript.validate.enable": false
+}
