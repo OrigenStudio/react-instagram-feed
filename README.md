@@ -3,14 +3,17 @@
 Yes, `react-instagram-feed` would be a better name but it was taken...
 
 ## Quick start
-1. Install 
+
+1.  Install 
+
 ```sh
 npm install --save origen-react-instagram-feed || yarn add origen-react-instagram-feed
 ```
 
-2. Use it in a component
+2.  Use it in a component
 
 Quick recipe for use with Material-UI
+
 ```js
 // @flow
 
@@ -75,13 +78,12 @@ export default compose(
 )(InstaGrid);
 ```
 
-3. Use the component
+3.  Use the component
 
 ```js
 //...
 <InstaGrid account="origenstudio" numberOfMediaElements={9} />
 //...
-
 ```
 
 ## API
@@ -152,7 +154,7 @@ $ yarn run build # generate docs and transpile code
 ### Publish
 
 ```sh
-$ yarn version patch|minor|major
+$ yarn run version patch|minor|major
 $ yarn publish
 ```
 
