@@ -1,6 +1,6 @@
 {
   "name": "origen-react-instagram-feed",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Get the information from a public profile without need to access the API",
   "license": "MIT",
   "repository": "OrigenStudio/react-instagram-feed",
@@ -28,8 +28,8 @@
     "build": "babel src -d dist",
     "preversion": "yarn lint && yarn test && yarn build",
     "version": "standard-changelog && git add CHANGELOG.md",
-    "postpublish": "git push origin master --follow-tags",
-    "preyalc": "yarn build"
+    "prepublish": "yarn build",
+    "postpublish": "git push origin master --follow-tags"
   },
   "husky": {
     "hooks": {
