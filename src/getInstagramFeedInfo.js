@@ -4,23 +4,37 @@ import Axios from 'axios';
 import get from 'lodash/get';
 import slice from 'lodash/slice';
 
-type Options = {
-  numberOfMediaElements: number,
-  discardVideos: boolean,
-};
-
 /**
- * This function says hello.
- * @param account Some name to say hello for.
- * @returns The hello.
+ * This function returns a promise that when resolves return data extracted from the public profile page of an instagram account.
  */
 async function getInstagramFeedInfo(
   account: string,
-  options: Options = {
+  options: {
+    numberOfMediaElements: number,
+    discardVideos: boolean,
+  } = {
     numberOfMediaElements: 12,
     discardVideos: false,
   },
-) {
+): Promise<{
+  accountInfo: any,
+  accountFollowedBy: number,
+  accountFollow: number,
+  postsCount: number,
+  profilePic: string,
+  accountName: string,
+  media: Array<{
+    id: string,
+    displayImage: string,
+    thumbnail: string,
+    likes: number,
+    caption: string,
+    commentsNumber: number,
+    accessibilityCaption: string,
+    dimensions: { width: number, height: number },
+    postLink: string,
+  }>,
+}> {
   let media = [];
   let accountInfo = {};
 
