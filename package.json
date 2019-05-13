@@ -1,6 +1,6 @@
 {
   "name": "origen-react-instagram-feed",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Get the information from a public Instagram profile without need to access the API",
   "license": "MIT",
   "repository": "OrigenStudio/react-instagram-feed",
