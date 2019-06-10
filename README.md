@@ -1,13 +1,15 @@
 # origen-react-instagram-feed
 
-Yes, `react-instagram-feed` would be a better name but it was taken...
-
 ## Quick start
 
 1.  Install 
 
 ```sh
-npm install --save origen-react-instagram-feed || yarn add origen-react-instagram-feed
+npm install --save origen-react-instagram-feed
+```
+or
+```sh
+yarn add origen-react-instagram-feed
 ```
 
 2.  Use it in a component
